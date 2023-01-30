@@ -4,11 +4,11 @@
 
 ### Front spec.
 
-react, TypeScript, Styled component, webpack
+react, TypeScript, Styled component, CRA
 
 ### back spec.
 
-nodeJS, Express
+nodeJS, Express, sequelize
 
 ### DB spec.
 
@@ -24,17 +24,26 @@ MySQL
 -   게시판의 기본값은 최신순으로 한다
 -   반응형 웹으로 구현하고 추후 앱으로 제공한다
 
-### 개발 1차
+### 개발
+
+-   회원가입, 로그인, 게시판 작업 추가(디자인 시안)
 
 #### Front
 
--   화면 디자인 시안 작업
+-   화면 디자인 시안 작업 - 완료
+-   CRA 환경설정
+-   styled component css작업
 
 #### Server
 
--   날씨/온도 정보로 DB에서 의상데이터를 가져올 수 있는 API생성
+-   날씨/온도 정보로 DB에서 의상데이터를 가져올 수 있는 API생성 - 작업중
+-   회원가입, 로그인 API 작업
+-   게시판 CRUD API 작업
 
 #### DB
 
--   카테고리별 옷 목록 테이블 설계
+-   카테고리별 옷 목록 테이블 설계 - 완료
 -   DB테이블 및 스키마 자동화
+    => npx sequelize-cli db:create // 스키마 생성
+    => npx sequelize-cli db:migrate // 테이블 생성
+    => npx sequelize-cli db:seed:all // 더미데이터 마이그레이션

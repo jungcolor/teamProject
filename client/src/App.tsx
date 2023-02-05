@@ -3,8 +3,6 @@ import Header from './components/Header';
 import WearList from './components/WearList';
 import WeatherComp from './components/weatherComp';
 
-
-
 function App() {
     return (
         <div style={{

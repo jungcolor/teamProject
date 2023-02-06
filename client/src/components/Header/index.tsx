@@ -5,16 +5,24 @@ import { Head, ButtonGroup } from './styles';
 
 const Header = () => {
     const [isMale, setIsMale] = useState(true);
+    const [isFemale, setIsFemale] = useState(false);
 
-    const onClickButton = () => {
-        setIsMale(!isMale);
+    const onClickEvent = (id:string) => {
+        if (id == "male") {
+            setIsMale(true);
+            setIsFemale(false);
+        } else if(id == "female"){
+            setIsFemale(true);
+            setIsMale(false);
+        }
+        
     }
     return (
         <Head>
             <MainTitle />
             <ButtonGroup>
-                <GenderButton title={"남성"} isChecked={isMale} setChecked={onClickButton} />
-                <GenderButton title={"여성"} isChecked={!isMale} setChecked={onClickButton} />
+                <GenderButton id={"male"} title={"남성"} isChecked={isMale} onClickEvent={onClickEvent} />
+                <GenderButton id={"female"} title={"여성"} isChecked={isFemale} onClickEvent={onClickEvent} />
             </ButtonGroup>
 
         </Head>

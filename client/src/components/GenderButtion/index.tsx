@@ -2,15 +2,16 @@ import React, { Dispatch, SetStateAction } from 'react';
 import { Button } from './styles';
 
 interface props {
+    id: string;
     title: string;
     isChecked: boolean;
-    setChecked: () => void;
+    onClickEvent: (male:string) => void;
 }
 
-const GenderButton = ({ title, isChecked, setChecked }: props) => {
+const GenderButton = ({ id, title, isChecked, onClickEvent }: props) => {
     return (
         <div>
-            <Button style={isChecked ? { border: '1px solid #365FF1' } : { border: '1px solid #999999' }} onClick={o => { setChecked() }} >{title}</Button>
+            <Button id={id} style={isChecked ? { border: '1px solid #365FF1' } : { border: '1px solid #999999' }} onClick={o => { onClickEvent(id) }} >{title}</Button>
         </div>
     )
 

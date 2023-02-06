@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+
+interface iLocation{
+    latitude: number;
+    longitude: number;
+}
 
 const useCurrentLocation = (options = {}) => {
     // 파라미터에 옵션을 따로 넣을 수 있도록 구성
-    const [location, setLocation] = useState({});
+    const [location, setLocation] = useState<iLocation>();
     const [error, setError] = useState("");
 
     const handleSuccess = (location: any) => {
-        const { latitude, longitude } = location.coords;
+        let { latitude, longitude } = location.coords;
         setLocation({ latitude, longitude });
     };
     // 위치를 가져오는 것에 성공하면 좌표 저장

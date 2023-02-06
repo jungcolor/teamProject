@@ -79,7 +79,7 @@ export const Description = styled.text`
     order:2;
     width: 90px;
     height: 22px;
-    
+    margin-left:10px;    
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 600;
@@ -100,14 +100,12 @@ export const Description = styled.text`
     flex-grow: 0;
 `
 
-export const Icon = styled.text`
+export const Icon = styled.img`
     order:3;
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 100%;
-    /* or 44px */
+    
+    width: 30px;
+    height: 30px;
+    margin: 15px;
     
     
     color: #000000;
